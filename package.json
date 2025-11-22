@@ -1,0 +1,14 @@
+{
+  "name": "visionary",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "node ./apps/web/node_modules/next/dist/bin/next dev ./apps/web",
+    "build": "node ./apps/web/node_modules/next/dist/bin/next build ./apps/web",
+    "start": "node ./apps/web/node_modules/next/dist/bin/next start ./apps/web"
+  }
+}
