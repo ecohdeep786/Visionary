@@ -144,13 +144,11 @@ export default function Layout({ children, currentPageName }) {
                   </button>
                   
                   <Link to={createPageUrl("Home")} className="flex items-center gap-3">
-                          <img
-                            src="/assets/Visionary_logo.png"
-                            alt="Visionary Logo"
-                            className="h-6 w-auto logo-text"
-                            loading="eager"
-                            fetchPriority="high"
-                          />
+                    {/* Inline SVG logo to render instantly and avoid an extra request */}
+                    <svg className="h-6 w-auto logo-text" role="img" aria-label="Visionary" viewBox="0 0 160 24" xmlns="http://www.w3.org/2000/svg">
+                      <title>Visionary</title>
+                      <text x="0" y="16" fontFamily="var(--ui-font)" fontSize="16" fill="#0f172a" fontWeight="700">Visionary</text>
+                    </svg>
                   </Link>
 
                   <div className="hidden xl:flex items-center gap-6">
@@ -158,7 +156,7 @@ export default function Layout({ children, currentPageName }) {
                     <div className="relative group">
                       <button 
                         className="flex items-center gap-1 text-[15px] font-medium text-[#5f6368] hover:text-gray-900 transition-colors whitespace-nowrap"
-                        style={{ fontFamily: '"Product Sans", "Google Sans", sans-serif' }}
+                        style={{ fontFamily: 'var(--ui-font)' }}
                       >
                         Who you are
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -181,16 +179,16 @@ export default function Layout({ children, currentPageName }) {
                       </div>
                     </div>
 
-                    <a href="#" className="text-[15px] font-medium text-[#5f6368] hover:text-gray-900 transition-colors whitespace-nowrap" style={{ fontFamily: '"Product Sans", "Google Sans", sans-serif' }}>
+                    <a href="#" className="text-[15px] font-medium text-[#5f6368] hover:text-gray-900 transition-colors whitespace-nowrap" style={{ fontFamily: 'var(--ui-font)' }}>
                       Where to start?
                     </a>
-                    <a href="#" className="text-[15px] font-medium text-[#5f6368] hover:text-gray-900 transition-colors whitespace-nowrap" style={{ fontFamily: '"Product Sans", "Google Sans", sans-serif' }}>
+                    <a href="#" className="text-[15px] font-medium text-[#5f6368] hover:text-gray-900 transition-colors whitespace-nowrap" style={{ fontFamily: 'var(--ui-font)' }}>
                       Solutions
                     </a>
-                    <a href="#" className="text-[15px] font-medium text-[#5f6368] hover:text-gray-900 transition-colors whitespace-nowrap" style={{ fontFamily: '"Product Sans", "Google Sans", sans-serif' }}>
+                    <a href="#" className="text-[15px] font-medium text-[#5f6368] hover:text-gray-900 transition-colors whitespace-nowrap" style={{ fontFamily: 'var(--ui-font)' }}>
                       Learning & insights
                     </a>
-                    <a href="#" className="text-[15px] font-medium text-[#5f6368] hover:text-gray-900 transition-colors whitespace-nowrap" style={{ fontFamily: '"Product Sans", "Google Sans", sans-serif' }}>
+                    <a href="#" className="text-[15px] font-medium text-[#5f6368] hover:text-gray-900 transition-colors whitespace-nowrap" style={{ fontFamily: 'var(--ui-font)' }}>
                       Get support
                     </a>
                     </div>
@@ -199,14 +197,14 @@ export default function Layout({ children, currentPageName }) {
                     <div className="flex items-center gap-2 lg:gap-4">
                     <button
                     className="hidden xl:flex items-center gap-2 text-[15px] font-medium text-gray-700 hover:text-gray-900 bg-transparent transition-colors whitespace-nowrap"
-                    style={{ fontFamily: '"Product Sans", "Google Sans", sans-serif' }}
+                    style={{ fontFamily: 'var(--ui-font)' }}
                     >
                     <User size={16} />
                     Sign in
                     </button>
 
                     <Link to={createPageUrl("Download")} className="hidden xl:block">
-                    <button className="bg-black hover:bg-gray-800 text-white text-[15px] font-medium px-5 py-2.5 rounded-full transition-all flex items-center gap-2 whitespace-nowrap" style={{ fontFamily: '"Product Sans", "Google Sans", sans-serif' }}>
+                    <button className="bg-black hover:bg-gray-800 text-white text-[15px] font-medium px-5 py-2.5 rounded-full transition-all flex items-center gap-2 whitespace-nowrap" style={{ fontFamily: 'var(--ui-font)' }}>
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" fill="currentColor"/>
                       </svg>

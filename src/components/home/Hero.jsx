@@ -23,11 +23,12 @@ export default function Hero() {
             ref={videoRef}
             className="w-full h-full object-cover"
             src={videoSrc}
+            poster="/assets/background_hero_poster.svg"
             autoPlay
             muted
             loop
             playsInline
-            preload="auto"
+            preload="metadata"
           />
         )}
       </div>
@@ -39,7 +40,7 @@ export default function Hero() {
           <div className="mb-8 inline-block">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/90 backdrop-blur-md border border-gray-200 rounded-full text-sm font-medium text-gray-900 shadow-sm transition-shadow hover:shadow-md cursor-default">
               <Sparkles className="w-4 h-4 text-blue-600" />
-              <span style={{ fontFamily: '"Product Sans", "Google Sans", sans-serif' }}>Visionary for Education</span>
+              <span style={{ fontFamily: 'var(--ui-font)' }}>Visionary for Education</span>
             </div>
           </div>
 
@@ -47,7 +48,7 @@ export default function Hero() {
           <h1
             className="text-[2.5rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[6rem] xl:text-[7rem] leading-tight text-[#202124] mb-6 -ml-1 tracking-tight whitespace-nowrap"
             style={{ 
-              fontFamily: '"Product Sans", "Google Sans", sans-serif',
+              fontFamily: 'var(--ui-font)',
               fontWeight: 450, 
               letterSpacing: '-0.03em' 
             }}
@@ -79,7 +80,7 @@ export default function Hero() {
           <p
             className="text-lg md:text-xl text-[#5f6368] mb-10 max-w-2xl leading-relaxed"
             style={{ 
-              fontFamily: '"Product Sans", "Google Sans", sans-serif',
+              fontFamily: 'var(--ui-font)',
               fontWeight: 400 
             }}
           >
@@ -90,14 +91,14 @@ export default function Hero() {
           <div className="flex flex-wrap items-center gap-4">
             <button 
               className="inline-flex items-center justify-center h-14 px-8 rounded-full bg-[#202124] text-white text-[17px] font-medium hover:bg-[#3c4043] transition-colors"
-              style={{ fontFamily: '"Product Sans", "Google Sans", sans-serif' }}
+              style={{ fontFamily: 'var(--ui-font)' }}
             >
               Start free now
             </button>
 
             <button 
               className="inline-flex items-center justify-center h-14 px-8 rounded-full bg-[#f1f3f4] text-[#202124] text-[17px] font-medium hover:bg-[#e8eaed] transition-colors"
-              style={{ fontFamily: '"Google Sans", sans-serif' }}
+              style={{ fontFamily: 'var(--ui-font)' }}
             >
               Explore more
             </button>
