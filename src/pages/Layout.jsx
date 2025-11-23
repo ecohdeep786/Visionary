@@ -148,13 +148,13 @@ export default function Layout({ children, currentPageName }) {
                   </button>
                   
                   <Link to={createPageUrl("Home")} className="flex items-center gap-3">
-                      <img 
-                        src="/assets/visionary_logo.png" 
-                        alt="Visionary Logo" 
-                        className="h-6 w-auto logo-text"
-                        loading="eager"
-                        fetchPriority="high"
-                      />
+                          <img
+                            src="/assets/Visionary_logo.png"
+                            alt="Visionary Logo"
+                            className="h-6 w-auto logo-text"
+                            loading="eager"
+                            fetchPriority="high"
+                          />
                   </Link>
 
                   <div className="hidden xl:flex items-center gap-6">
@@ -391,9 +391,9 @@ export default function Layout({ children, currentPageName }) {
           <div className="border-t border-gray-200 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="flex items-center gap-6 text-sm text-gray-600">
-                <img 
-                  src="/assets/visionary_mark.png" 
-                  alt="Visionary" 
+                <img
+                  src="/assets/Visionary_logo.png"
+                  alt="Visionary"
                   className="h-5 w-auto opacity-60"
                   loading="lazy"
                 />

@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   const videoRef = useRef(null);
-  // use a local placeholder video or null; add your asset in /public if needed
-  const videoSrc = null; // '/assets/hero.mp4'
+  // Background video in /assets (uploaded as background_hero_video.mp4)
+  const videoSrc = '/assets/background_hero_video.mp4';
 
   useEffect(() => {
     if (videoRef.current) {
@@ -18,7 +18,18 @@ export default function Hero() {
     <section className="relative overflow-hidden min-h-screen flex items-center bg-white">
       {/* Video Background */}
       <div className="absolute inset-0 overflow-hidden z-0">
-        {/* Background media removed or replaced with local assets */}
+        {videoSrc && (
+          <video
+            ref={videoRef}
+            className="w-full h-full object-cover"
+            src={videoSrc}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+          />
+        )}
       </div>
 
       {/* Content */}
