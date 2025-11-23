@@ -1,33 +1,27 @@
 # Visionary
 
-Visionary — a Next.js starter scaffold for the Visionary edtech product.
+Visionary — a starter scaffold for the Visionary edtech product.
 
-Quick start (after installing dependencies):
+## Running the app (development)
 
 ```bash
 # from repo root
-cd apps/web
-npm install
-npm run dev
-```
-
-Open http://localhost:3000 to see the Hello World page.
-
-Development
------------
-
-This repo uses a workspace layout. To run the Next.js app locally:
-
-```bash
-# install a package manager that supports workspaces (pnpm recommended)
 pnpm install
 pnpm --filter visionary-web dev
 ```
 
-Or run from the app folder:
+Or run the Next.js app directly:
 
 ```bash
 cd apps/web
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
+
+## Building for production
+
+```bash
+pnpm --filter visionary-web build
+```
+
+This README is intentionally minimal — the repository contains a Next.js app in `apps/web` and a placeholder UI package in `packages/ui`.
