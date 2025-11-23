@@ -53,14 +53,25 @@ export default function Layout({ children, currentPageName }) {
     }
     metaDescription.content = 'Visionary - AI-Powered Education Platform for Students, Educators, and Professionals';
 
-    // Security headers
+    // Security headers (meta CSP for browsers; stronger policy encouraged on server)
     let metaCSP = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
     if (!metaCSP) {
       metaCSP = document.createElement('meta');
       metaCSP.httpEquiv = 'Content-Security-Policy';
       document.head.appendChild(metaCSP);
     }
-    metaCSP.content = "default-src 'self'; img-src 'self' https: data:; media-src 'self' https: data: blob:; connect-src 'self' https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval';";
+    // Restrict sources: allow styles inline (required by some components),
+    // disallow unsafe script eval/inline, and serve fonts/images from self.
+    metaCSP.content = "default-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self' https:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; frame-ancestors 'self'; base-uri 'self';";
+
+    // Referrer policy
+    let metaReferrer = document.querySelector('meta[name="referrer"]');
+    if (!metaReferrer) {
+      metaReferrer = document.createElement('meta');
+      metaReferrer.name = 'referrer';
+      document.head.appendChild(metaReferrer);
+    }
+    metaReferrer.content = 'strict-origin-when-cross-origin';
 
     let metaXFrame = document.querySelector('meta[http-equiv="X-Frame-Options"]');
     if (!metaXFrame) {
@@ -79,22 +90,7 @@ export default function Layout({ children, currentPageName }) {
     }
     metaViewport.content = 'width=device-width, initial-scale=1, viewport-fit=cover';
 
-    // Preconnect to external domains
-    const preconnect1 = document.createElement('link');
-    preconnect1.rel = 'preconnect';
-    preconnect1.href = 'https://fonts.googleapis.com';
-    document.head.appendChild(preconnect1);
-
-    const preconnect2 = document.createElement('link');
-    preconnect2.rel = 'preconnect';
-    preconnect2.href = 'https://fonts.gstatic.com';
-    preconnect2.crossOrigin = 'anonymous';
-    document.head.appendChild(preconnect2);
-
-    const preconnect3 = document.createElement('link');
-    preconnect3.rel = 'preconnect';
-    preconnect3.href = 'https://images.unsplash.com';
-    document.head.appendChild(preconnect3);
+    // Avoid unnecessary external preconnects now that fonts are self-hosted.
 
     // Preload self-hosted fonts (using uploaded .ttf files in /public/fonts/)
     const createPreload = (href, type = 'font/ttf') => {
