@@ -144,11 +144,13 @@ export default function Layout({ children, currentPageName }) {
                   </button>
                   
                   <Link to={createPageUrl("Home")} className="flex items-center gap-3">
-                    {/* Inline SVG logo to render instantly and avoid an extra request */}
-                    <svg className="h-6 w-auto logo-text" role="img" aria-label="Visionary" viewBox="0 0 160 24" xmlns="http://www.w3.org/2000/svg">
-                      <title>Visionary</title>
-                      <text x="0" y="16" fontFamily="var(--ui-font)" fontSize="16" fill="#0f172a" fontWeight="700">Visionary</text>
-                    </svg>
+                    <img
+                      src="/assets/Visionary_logo.png"
+                      alt="Visionary Logo"
+                      className="h-6 w-auto logo-text"
+                      loading="eager"
+                      fetchPriority="high"
+                    />
                   </Link>
 
                   <div className="hidden xl:flex items-center gap-6">
