@@ -96,38 +96,20 @@ export default function Layout({ children, currentPageName }) {
     preconnect3.href = 'https://images.unsplash.com';
     document.head.appendChild(preconnect3);
 
-    // Preload self-hosted fonts (place licensed .woff2 files into /public/fonts/)
-    const preloadFont1 = document.createElement('link');
-    preloadFont1.rel = 'preload';
-    preloadFont1.href = '/fonts/ProductSans-Regular.woff2';
-    preloadFont1.as = 'font';
-    preloadFont1.type = 'font/woff2';
-    preloadFont1.crossOrigin = 'anonymous';
-    document.head.appendChild(preloadFont1);
+    // Preload self-hosted fonts (using uploaded .ttf files in /public/fonts/)
+    const createPreload = (href, type = 'font/ttf') => {
+      const l = document.createElement('link');
+      l.rel = 'preload';
+      l.href = href;
+      l.as = 'font';
+      l.type = type;
+      l.crossOrigin = 'anonymous';
+      document.head.appendChild(l);
+    };
 
-    const preloadFont2 = document.createElement('link');
-    preloadFont2.rel = 'preload';
-    preloadFont2.href = '/fonts/ProductSans-Medium.woff2';
-    preloadFont2.as = 'font';
-    preloadFont2.type = 'font/woff2';
-    preloadFont2.crossOrigin = 'anonymous';
-    document.head.appendChild(preloadFont2);
-
-    const preloadFont3 = document.createElement('link');
-    preloadFont3.rel = 'preload';
-    preloadFont3.href = '/fonts/GoogleSans-Regular.woff2';
-    preloadFont3.as = 'font';
-    preloadFont3.type = 'font/woff2';
-    preloadFont3.crossOrigin = 'anonymous';
-    document.head.appendChild(preloadFont3);
-
-    const preloadFont4 = document.createElement('link');
-    preloadFont4.rel = 'preload';
-    preloadFont4.href = '/fonts/GoogleSans-Medium.woff2';
-    preloadFont4.as = 'font';
-    preloadFont4.type = 'font/woff2';
-    preloadFont4.crossOrigin = 'anonymous';
-    document.head.appendChild(preloadFont4);
+    createPreload('/fonts/ProductSans-Regular.ttf');
+    createPreload('/fonts/ProductSans-Medium.ttf');
+    createPreload('/fonts/ProductSans-Bold.ttf');
   }, [currentPageName]);
 
   return (

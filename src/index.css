@@ -18,31 +18,37 @@
   Once uploaded, the @font-face blocks below will load them from `/fonts/`.
 */
 
+/* Using uploaded TTF files in /public/fonts/ (Product Sans). */
 @font-face {
   font-family: 'Product Sans';
-  src: url('/fonts/ProductSans-Regular.woff2') format('woff2');
+  src: url('/fonts/ProductSans-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Product Sans';
-  src: url('/fonts/ProductSans-Medium.woff2') format('woff2');
+  src: url('/fonts/ProductSans-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
+  font-family: 'Product Sans';
+  src: url('/fonts/ProductSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* If you provide Google Sans files later, update these rules. For now we
+   map `Google Sans` to the same Product Sans Regular font so `font-family:
+   "Google Sans"` calls render using Product Sans when Google Sans isn't
+   available locally. */
+@font-face {
   font-family: 'Google Sans';
-  src: url('/fonts/GoogleSans-Regular.woff2') format('woff2');
+  src: url('/fonts/ProductSans-Regular.ttf') format('truetype');
   font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Google Sans';
-  src: url('/fonts/GoogleSans-Medium.woff2') format('woff2');
-  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
