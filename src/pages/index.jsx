@@ -1,6 +1,7 @@
 import Layout from "./Layout.jsx";
 
 import Home from "./Home";
+import Landing from "./Landing";
 
 import Students from "./Students";
 
@@ -50,23 +51,14 @@ function PagesContent() {
     
     return (
         <Layout currentPageName={currentPage}>
-            <Routes>            
-                
-                    <Route path="/" element={<Home />} />
-                
-                
-                <Route path="/Home" element={<Home />} />
-                
-                <Route path="/Students" element={<Students />} />
-                
-                <Route path="/Educators" element={<Educators />} />
-                
-                <Route path="/Professionals" element={<Professionals />} />
-                
-                <Route path="/Parents" element={<Parents />} />
-                
-                <Route path="/Download" element={<Download />} />
-                
+            <Routes>
+                <Route path="/" element={<Landing />} />
+                <Route path="/home" element={<Landing />} />
+                <Route path="/students" element={<Landing />} />
+                <Route path="/educators" element={<Landing />} />
+                <Route path="/professionals" element={<Landing />} />
+                <Route path="/parents" element={<Landing />} />
+                <Route path="/download" element={<Landing />} />
             </Routes>
         </Layout>
     );
