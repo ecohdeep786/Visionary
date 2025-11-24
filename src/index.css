@@ -120,7 +120,7 @@
 :root {
   /* Put fast system fonts first so text can render immediately, then
      fall back to Product Sans when it becomes available (font-display: swap). */
-  --ui-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Product Sans", "Google Sans", sans-serif;
+  --ui-font: 'Google Sans', sans-serif
 }
 
 body {
