@@ -1,4 +1,4 @@
-import MainLayout from "@/components/layout/MainLayout.jsx";
+import Layout from "@/components/layout/Layout.jsx";
 
 import Home from "@/features/home";
 
@@ -49,7 +49,7 @@ function PagesContent() {
     const currentPage = _getCurrentPage(location.pathname);
     
     return (
-        <MainLayout currentPageName={currentPage}>
+        <Layout currentPageName={currentPage}>
             <Routes>            
                 
                     <Route path="/" element={<Home />} />
@@ -68,7 +68,7 @@ function PagesContent() {
                 <Route path="/Download" element={<Download />} />
                 
             </Routes>
-        </MainLayout>
+        </Layout>
     );
 }
 

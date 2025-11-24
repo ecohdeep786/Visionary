@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { createPageUrl } from "@/lib/utils";
 import { X, User, Download as DownloadIcon, HelpCircle, Youtube, Facebook, Linkedin, ArrowRight, Menu } from "lucide-react";
 
-function MainLayout({ children, currentPageName }) {
+export default function Layout({ children, currentPageName }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showBanner, setShowBanner] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -405,5 +405,3 @@ function MainLayout({ children, currentPageName }) {
     </div>
   );
 }
-
-export default MainLayout;

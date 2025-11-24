@@ -30,4 +30,10 @@ export function mergeStyles(...objs) {
   return Object.assign({}, ...objs.filter(Boolean));
 }
 
+// Helper to convert page names to URL paths
+export function createPageUrl(pageName) {
+  if (!pageName) return '/';
+  return `/${pageName.toLowerCase().replace(/\s+/g, '-')}`;
+}
+
 export default cn;
