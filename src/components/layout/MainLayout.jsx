@@ -1,10 +1,9 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { createPageUrl } from "@/utils";
+import { createPageUrl } from "@/lib/utils";
 import { X, User, Download as DownloadIcon, HelpCircle, Youtube, Facebook, Linkedin, ArrowRight, Menu } from "lucide-react";
 
-export default function Layout({ children, currentPageName }) {
+export default function MainLayout({ children, currentPageName }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showBanner, setShowBanner] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
