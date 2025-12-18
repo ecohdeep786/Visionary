@@ -1,33 +1,34 @@
-<<<<<<< HEAD
-Get started by customizing your environment (defined in the .idx/dev.nix file) with the tools and IDE extensions you'll need for your project!
-
-Learn more at https://developers.google.com/idx/guides/customize-idx-env
-=======
 # Visionary
 
-Visionary — a starter scaffold for the Visionary edtech product.
+Visionary — a Vite + React scaffold for the Visionary edtech product.
 
-## Running the app (development)
+## Quick start (development)
 
 ```bash
 # from repo root
-pnpm install
-pnpm --filter visionary-web dev
+npm install
+npm run dev
 ```
 
-Or run the Next.js app directly:
+Open the app at `http://localhost:5173` (default Vite URL).
 
-```bash
-cd apps/web
-pnpm install
-pnpm run dev
-```
+## Project structure (high level)
 
-## Building for production
+- `src/features/` — Feature-based entry points (home, students, educators, etc.)
+- `src/components/` — Shared UI components and layout
+- `src/router/` — Application router (canonical source of routes)
+- `src/app/` — Root app component
+- `src/lib/`, `src/hooks/`, `src/services/` — Utilities, hooks, API clients
 
-```bash
-pnpm --filter visionary-web build
-```
+Notes:
+- The previous `src/pages/` implementations were merged into `src/features/` to standardize on a feature-based layout. `src/pages/*` now contains thin proxies only where needed (for backward compatibility).
+- See `docs/STRUCTURE.md` for a detailed guide on the recommended project layout.
 
-This README is intentionally minimal — the repository contains a Next.js app in `apps/web` and a placeholder UI package in `packages/ui`.
->>>>>>> db6db01a3c757252b79e37463e6db9927f1db5bf
+## Scripts
+
+- `npm run dev` - start dev server
+- `npm run build` - build production bundle
+- `npm run preview` - preview production build
+- `npm run lint` - run ESLint
+
+If you plan to run in a different environment (pnpm, yarn), adapt the install/run commands accordingly.

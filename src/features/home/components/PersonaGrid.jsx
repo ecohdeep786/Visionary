@@ -4,112 +4,38 @@ import { createPageUrl } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 
 export default function PersonaGrid() {
-  const personas = [
-    {
-      title: "For Students",
-      tagline: "Master every exam",
-      description: "JEE, NEET, UPSC prep with AI-powered visual learning",
-      image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop&q=80",
-      color: "#4285F4",
-      path: "Students",
-    },
-    {
-      title: "For Educators",
-      tagline: "Teach smarter",
-      description: "Create engaging lessons and track student progress",
-      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=600&fit=crop&q=80",
-      color: "#34A853",
-      path: "Educators",
-    },
-    {
-      title: "For Professionals",
-      tagline: "Upskill faster",
-      description: "Learn in-demand skills without career breaks",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&q=80",
-      color: "#FBBC04",
-      path: "Professionals",
-    },
-    {
-      title: "For Parents",
-      tagline: "Stay connected",
-      description: "Track your child's learning journey and progress",
-      image: "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=800&h=600&fit=crop&q=80",
-      color: "#EA4335",
-      path: "Parents",
-    },
-  ];
+  const roles = ["Student", "Teacher", "Parent", "Professional", "Organization"];
 
   return (
-    <section className="py-16 px-6 md:px-12 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="mb-6">
-            <div className="inline-block px-3 py-1 bg-white border border-gray-300 rounded-full text-xs font-medium text-gray-700">
-              <span style={{ fontFamily: '"Product Sans", "Google Sans", sans-serif' }}>Who is Visionary for</span>
-            </div>
-          </div>
+    <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-6 text-center">
+        <blockquote className="text-2xl italic text-gray-700 max-w-4xl mx-auto mb-20">
+          "Visionary provides visual explanations, guided support, and simple creation tools for every stage of learning..."
+        </blockquote>
 
-          <h2
-            className="text-3xl md:text-5xl text-[#202124] mb-4 tracking-tight"
-            style={{ fontFamily: '"Product Sans", "Google Sans", sans-serif', fontWeight: 400 }}
-          >
-            Choose your path
-          </h2>
-          <p 
-            className="text-lg text-[#5f6368] max-w-xl mx-auto"
-            style={{ fontFamily: '"Product Sans", "Google Sans", sans-serif' }}
-          >
-            Personalized learning for every journey
-          </p>
+        <h2 className="text-3xl font-bold mb-10">Visionary solves real learning problems for every category</h2>
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {roles.map((role) => (
+            <button
+              key={role}
+              className={`px-6 py-2 rounded-full border ${role === 'Student' ? 'bg-black text-white' : 'bg-white text-gray-600'}`}>
+              {role}
+            </button>
+          ))}
         </div>
 
-        {/* Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {personas.map((persona, index) => (
-            <div key={persona.title}>
-              <Link to={createPageUrl(persona.path)}>
-                <div className="group relative bg-white rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 h-[400px]">
-                  {/* Background Image */}
-                  <div className="absolute inset-0">
-                    <img 
-                      src={persona.image}
-                      alt={persona.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="relative h-full flex flex-col justify-end p-8">
-                    <div className="mb-4">
-                      <div 
-                        className="inline-block px-4 py-2 rounded-full text-sm font-medium text-white mb-4"
-                        style={{ backgroundColor: persona.color }}
-                      >
-                        {persona.tagline}
-                      </div>
-                    </div>
-                    
-                    <h3 className="text-3xl font-medium text-white mb-3">
-                      {persona.title}
-                    </h3>
-                    
-                    <p className="text-lg text-white/90 mb-6">
-                      {persona.description}
-                    </p>
-
-                    <div className="flex items-center gap-2 text-white group-hover:gap-4 transition-all">
-                      <span className="font-medium">Explore</span>
-                      <ArrowRight className="w-5 h-5" />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          ))}
+        <div className="bg-white p-12 rounded-3xl shadow-sm flex flex-col md:flex-row items-center gap-10">
+          <div className="md:w-1/2 text-left">
+            <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded text-sm font-bold">Student</span>
+            <h3 className="text-4xl font-bold mt-4 mb-4">Learning for Students</h3>
+            <p className="text-gray-600 mb-6">Learn with clear 3D visuals, instant doubt help, and guided practice for every class and exam.</p>
+            <Link to={createPageUrl('students')} className="inline-flex items-center gap-2 text-black font-bold">
+              Explore Students <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="md:w-1/2">
+            <img src="/api/placeholder/600/400" alt="Student learning" className="rounded-2xl" />
+          </div>
         </div>
       </div>
     </section>

@@ -4,7 +4,7 @@ import Home from "@/features/home";
 
 import Students from "@/features/students";
 
-import Educators from "@/features/educators";
+import Teachers from "@/features/teacher";
 
 import Professionals from "@/features/professionals";
 
@@ -13,6 +13,7 @@ import Parents from "@/features/parents";
 import Download from "@/features/download";
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { createPageUrl } from "@/lib/utils";
 
 const PAGES = {
     
@@ -20,7 +21,7 @@ const PAGES = {
     
     Students: Students,
     
-    Educators: Educators,
+    Teachers: Teachers,
     
     Professionals: Professionals,
     
@@ -50,23 +51,14 @@ function PagesContent() {
     
     return (
         <Layout currentPageName={currentPage}>
-            <Routes>            
-                
-                    <Route path="/" element={<Home />} />
-                
-                
-                <Route path="/Home" element={<Home />} />
-                
-                <Route path="/Students" element={<Students />} />
-                
-                <Route path="/Educators" element={<Educators />} />
-                
-                <Route path="/Professionals" element={<Professionals />} />
-                
-                <Route path="/Parents" element={<Parents />} />
-                
-                <Route path="/Download" element={<Download />} />
-                
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path={createPageUrl('Home')} element={<Home />} />
+                <Route path={createPageUrl('Students')} element={<Students />} />
+                <Route path={createPageUrl('Teachers')} element={<Teachers />} />
+                <Route path={createPageUrl('Professionals')} element={<Professionals />} />
+                <Route path={createPageUrl('Parents')} element={<Parents />} />
+                <Route path={createPageUrl('Download')} element={<Download />} />
             </Routes>
         </Layout>
     );

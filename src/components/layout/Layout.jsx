@@ -168,8 +168,8 @@ export default function Layout({ children, currentPageName }) {
                         <Link to={createPageUrl("Students")} className="block px-4 py-2 text-[15px] text-gray-700 hover:bg-gray-50 transition-colors">
                           Students
                         </Link>
-                        <Link to={createPageUrl("Educators")} className="block px-4 py-2 text-[15px] text-gray-700 hover:bg-gray-50 transition-colors">
-                          Educators
+                        <Link to={createPageUrl("Teachers")} className="block px-4 py-2 text-[15px] text-gray-700 hover:bg-gray-50 transition-colors">
+                          Teachers
                         </Link>
                         <Link to={createPageUrl("Professionals")} className="block px-4 py-2 text-[15px] text-gray-700 hover:bg-gray-50 transition-colors">
                           Professionals
@@ -231,8 +231,8 @@ export default function Layout({ children, currentPageName }) {
               <Link to={createPageUrl("Students")} className="text-[15px] font-medium text-[#5f6368] hover:text-gray-900 hover:bg-gray-100 px-4 py-2 rounded-[90%] transition-all" style={{ fontFamily: '"Product Sans", "Google Sans", Roboto, Arial, sans-serif' }}>
                 Students
               </Link>
-              <Link to={createPageUrl("Educators")} className="text-[15px] font-medium text-[#5f6368] hover:text-gray-900 hover:bg-gray-100 px-4 py-2 rounded-[90%] transition-all" style={{ fontFamily: '"Product Sans", "Google Sans", Roboto, Arial, sans-serif' }}>
-                Educators
+              <Link to={createPageUrl("Teachers")} className="text-[15px] font-medium text-[#5f6368] hover:text-gray-900 hover:bg-gray-100 px-4 py-2 rounded-[90%] transition-all" style={{ fontFamily: '"Product Sans", "Google Sans", Roboto, Arial, sans-serif' }}>
+                Teachers
               </Link>
               <Link to={createPageUrl("Professionals")} className="text-[15px] font-medium text-[#5f6368] hover:text-gray-900 hover:bg-gray-100 px-4 py-2 rounded-[90%] transition-all" style={{ fontFamily: '"Product Sans", "Google Sans", Roboto, Arial, sans-serif' }}>
                 Professionals
@@ -281,8 +281,8 @@ export default function Layout({ children, currentPageName }) {
                   <Link to={createPageUrl("Students")} className="block text-[15px] font-medium text-[#5f6368] hover:text-gray-900 py-2" style={{ fontFamily: '"Product Sans", "Google Sans", Roboto, Arial, sans-serif' }}>
                     Students
                   </Link>
-                  <Link to={createPageUrl("Educators")} className="block text-[15px] font-medium text-[#5f6368] hover:text-gray-900 py-2" style={{ fontFamily: '"Product Sans", "Google Sans", Roboto, Arial, sans-serif' }}>
-                    Educators
+                  <Link to={createPageUrl("Teachers")} className="block text-[15px] font-medium text-[#5f6368] hover:text-gray-900 py-2" style={{ fontFamily: '"Product Sans", "Google Sans", Roboto, Arial, sans-serif' }}>
+                    Teachers
                   </Link>
                   <Link to={createPageUrl("Professionals")} className="block text-[15px] font-medium text-[#5f6368] hover:text-gray-900 py-2" style={{ fontFamily: '"Product Sans", "Google Sans", Roboto, Arial, sans-serif' }}>
                     Professionals
@@ -348,7 +348,7 @@ export default function Layout({ children, currentPageName }) {
               <h4 className="text-sm font-semibold text-gray-900 mb-4">Visionary Family</h4>
               <ul className="space-y-3">
                 <li><Link to={createPageUrl("Students")} className="text-sm text-gray-600 hover:text-gray-900">Students</Link></li>
-                <li><Link to={createPageUrl("Educators")} className="text-sm text-gray-600 hover:text-gray-900">Educators</Link></li>
+                <li><Link to={createPageUrl("Teachers")} className="text-sm text-gray-600 hover:text-gray-900">Teachers</Link></li>
                 <li><Link to={createPageUrl("Professionals")} className="text-sm text-gray-600 hover:text-gray-900">Professional</Link></li>
                 <li><Link to={createPageUrl("Parents")} className="text-sm text-gray-600 hover:text-gray-900">Parents</Link></li>
               </ul>
