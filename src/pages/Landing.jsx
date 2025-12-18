@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import Home from "./Home";
 import Students from "./Students";
-import Educators from "./Educators";
+import Teachers from "./Teachers";
 import Professionals from "./Professionals";
 import Parents from "./Parents";
 import Download from "./Download";
@@ -10,7 +10,7 @@ import Download from "./Download";
 // Helper to map path -> section id
 const PATH_TO_ID = {
   '/students': 'students',
-  '/educators': 'educators',
+  '/teachers': 'teachers',
   '/professionals': 'professionals',
   '/parents': 'parents',
   '/download': 'download',
@@ -49,8 +49,8 @@ export default function Landing() {
         <Students />
       </div>
 
-      <div id="educators">
-        <Educators />
+      <div id="teachers">
+        <Teachers />
       </div>
 
       <div id="professionals">

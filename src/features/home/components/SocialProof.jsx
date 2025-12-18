@@ -107,7 +107,7 @@ export default function SocialProof() {
             </div>
             <div>
               <div className="text-5xl font-bold mb-2">1000+</div>
-              <div className="text-blue-100">Educators</div>
+              <div className="text-blue-100">Teachers</div>
             </div>
             <div>
               <div className="text-5xl font-bold mb-2">95%</div>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { createPageUrl } from "@/lib/utils";
 import { ArrowRight, Palette, Users, BarChart, Trophy, Rocket, CheckCircle } from "lucide-react";
 
-export default function Educators() {
+export default function Teachers() {
   const journey = [
     {
       phase: "Start",
@@ -54,7 +54,7 @@ export default function Educators() {
             className="mb-6"
           >
             <div className="inline-block px-4 py-1.5 bg-green-50 text-green-700 rounded-full text-sm font-medium">
-              For Educators
+              For Teachers
             </div>
           </motion.div>
 
@@ -176,7 +176,7 @@ export default function Educators() {
             Start teaching better today
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Join 5,000+ educators transforming education
+            Join 5,000+ teachers transforming education
           </p>
           <Link to={createPageUrl("Download")}>
             <button className="bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-full text-lg font-medium transition-all inline-flex items-center gap-2">

@@ -20,7 +20,7 @@ export default function FeatureCarousel() {
     },
     {
       title: "Live Classes",
-      description: "Interactive sessions with top educators and peers",
+      description: "Interactive sessions with top teachers and peers",
       image: "https://images.unsplash.com/photo-1588072432904-76e8cb5b9c5f?w=800&h=600&fit=crop&q=80",
       color: "#FBBC04"
     },

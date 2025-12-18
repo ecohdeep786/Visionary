@@ -38,7 +38,7 @@ src/
 │   │   ├── types/
 │   │   └── index.jsx
 │   │
-│   ├── educators/         # Educators feature
+│   ├── teacher/         # Teachers feature
 │   ├── professionals/     # Professionals feature
 │   ├── parents/           # Parents feature
 │   └── download/          # Download feature
@@ -120,7 +120,7 @@ src/
 ## 🎯 Key Principles
 
 ### 1. **Feature-Based Architecture**
-- Each feature (home, students, educators, etc.) is **self-contained**
+- Each feature (home, students, teachers, etc.) is **self-contained**
 - Contains its own components, hooks, services, constants, and types
 - Easy to add/remove features without affecting other parts
 

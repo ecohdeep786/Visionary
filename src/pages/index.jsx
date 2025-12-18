@@ -4,7 +4,7 @@ import Home from "./Home";
 
 import Students from "./Students";
 
-import Educators from "./Educators";
+import Teachers from "./Teachers";
 
 import Professionals from "./Professionals";
 
@@ -20,7 +20,7 @@ const PAGES = {
     
     Students: Students,
     
-    Educators: Educators,
+    Teachers: Teachers,
     
     Professionals: Professionals,
     
@@ -59,7 +59,7 @@ function PagesContent() {
                 
                 <Route path="/Students" element={<Students />} />
                 
-                <Route path="/Educators" element={<Educators />} />
+                <Route path="/Teachers" element={<Teachers />} />
                 
                 <Route path="/Professionals" element={<Professionals />} />
                 

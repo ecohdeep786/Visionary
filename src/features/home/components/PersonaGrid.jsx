@@ -14,12 +14,12 @@ export default function PersonaGrid() {
       path: "Students",
     },
     {
-      title: "For Educators",
+      title: "For Teachers",
       tagline: "Teach smarter",
       description: "Create engaging lessons and track student progress",
       image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=600&fit=crop&q=80",
       color: "#34A853",
-      path: "Educators",
+      path: "Teachers",
     },
     {
       title: "For Professionals",
