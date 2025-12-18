@@ -120,11 +120,11 @@
 :root {
   /* Put fast system fonts first so text can render immediately, then
      fall back to Product Sans when it becomes available (font-display: swap). */
-  --ui-font: 'Google Sans', sans-serif
+  --ui-font: 'Product Sans', sans-serif
 }
 
 body {
-  font-family: var(--ui-font);
+  font-family: 'Product Sans', sans-serif;
 }
 
 
